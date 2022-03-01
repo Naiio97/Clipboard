@@ -1,0 +1,73 @@
+@mixin myButton {
+    color: white;
+    font-size: 1rem;
+    margin: 5px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+
+    
+}
+
+@mixin hover-active-green {
+    &:hover {
+        background-color: hsl(171, 52%, 46%)
+    }
+    &:active {
+        background-color: hsl(171, 52%, 46%);
+        box-shadow: 0 3px hsl(171, 66%, 37%);
+        transform: translateY(2px);
+    }
+  }
+
+  @mixin hover-active-blue {
+    &:hover {
+        background-color: hsl(233, 94%, 66%)
+    }
+    &:active {
+        background-color: hsl(233, 94%, 66%);
+        box-shadow: 0 3px hsl(233, 100%, 64%);
+        transform: translateY(2px);
+    }
+  }
+
+  @mixin main-text {
+    h2 {
+        color: $main-color;
+        font-size: 2.6rem;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+    p {
+        color: $second-color;
+        font-size: 1.15rem;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+  }
+
+  @mixin productivity-block {
+      div{
+          width: 400px;
+      }
+
+      img {
+          margin-bottom: 40px;
+      }
+
+      h3 {
+        color: $main-color;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+
+      p{
+        color: $second-color;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+  }

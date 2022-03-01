@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+@import "variables";
+@import "mixins";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+html {
+    background: white;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    // width: 1440px;
+   
+}
+
+// Header
+
+header {
+    background-image: linear-gradient(to bottom, transparent, white), url("./images/bg-header-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+header img {
+    margin-top: 110px;
+    margin-bottom: 60px;
+}
+
+header h1 {
+    color: $main-color;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+header p {
+    color: $second-color;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.ios-button {
+    @include myButton;
+    background: hsl(171, 52%, 46%);
+    box-shadow: 1px 3px hsl(171, 66%, 37%);
+    @include hover-active-green ;
+}
+
+
+
+.mac-button {
+    @include myButton;
+    background: hsl(233, 94%, 66%);
+    box-shadow: 1px 3px hsl(233, 100%, 64%);
+    @include hover-active-blue 
+   
+}
+
+// Main
+main {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-first-text {
+    @include main-text;
+    margin-bottom: 60px;
+}
+
+.main-imac {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.info-right-side {
+    display: block;
+    margin-left: 100px;
+}
+
+.info-right-side h3 {
+    color: $main-color;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 50px 0 15px 0;
+
+}
+
+.info-right-side p {
+    color: $second-color;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.main-second-text {
+    @include main-text;
+    margin-bottom: 60px;
+}
+
+.devices {
+    margin-bottom: 100px;
+}
+
+.main-third-text {
+    @include main-text;
+    margin-bottom: 50px;
+}
+
+.productivity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include productivity-block;
+    margin-bottom: 150px;
+}
+
+.companies {
+    margin-bottom: 150px;
+}
+
+.companies img {
+    padding: 50px;
+}
+
+.fourth-main-text {
+    @include main-text;
+    margin-bottom: 40px;
+}
+
+.clipboard-buttons {
+    margin-bottom: 150px;
+}
+
+// Footer
+
+footer {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(202, 11%, 66%, 0.185);
+    height: 200px;
+    display: flex;
+}
+
+.footer-logo{
+    width: 300px;
+}
+
+.footer-logo img {
+    height: 70px;
+    width: 70px;
+    margin-left: 200px;
+}
+
+.links {
+   width: 800px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.links a {
+    text-decoration: none;
+    color: $second-color;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 10px 0 10px 120px;
+}
+
+.links a:hover {
+    color: hsl(171, 52%, 46%);
+}
+.links a:last-child {
+    padding-left: 60px;
+}
+
+.install {
+    padding-left: 60px !important;
+}
+
+.social-logos {
+   width: 300px;
+}
+
+.social-logos svg {
+    margin: 10px
+}
+.icon {
+    fill: hsl(210, 10%, 33%);
+}
+.icon:hover {
+    fill: hsl(171, 52%, 46%);
+}
