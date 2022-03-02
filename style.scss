@@ -15,14 +15,6 @@ html {
     font-family: 'Outfit', sans-serif;
 }
 
-body {
-    margin: 0 auto;
-    // width: 1440px;
-   
-}
-
-// Header
-
 header {
     background-image: linear-gradient(to bottom, transparent, white), url("./images/bg-header-desktop.png");
     background-repeat: no-repeat;
@@ -60,8 +52,6 @@ header p {
     box-shadow: 1px 3px hsl(171, 66%, 37%);
     @include hover-active-green ;
 }
-
-
 
 .mac-button {
     @include myButton;
@@ -162,7 +152,7 @@ footer {
 }
 
 .footer-logo{
-    width: 300px;
+    max-width: 25%;
 }
 
 .footer-logo img {
@@ -172,10 +162,11 @@ footer {
 }
 
 .links {
-   width: 800px;
+   max-width: 50%;
    display: flex;
    flex-wrap: wrap;
 }
+
 
 .links a {
     text-decoration: none;
@@ -197,7 +188,7 @@ footer {
 }
 
 .social-logos {
-   width: 300px;
+   width: 25%;
 }
 
 .social-logos svg {
@@ -208,4 +199,107 @@ footer {
 }
 .icon:hover {
     fill: hsl(171, 52%, 46%);
+}
+
+
+@media only screen and (max-width: 1700px) {
+    .press {
+        padding-left: 120px;
+    }
+    
+ }
+
+@media (max-width: 1270px) {
+    .links {
+        .faqs,
+        .contact {
+            padding-left: 60px;
+        }
+        
+    }
+}
+
+@media only screen and (max-width: 1190px) {
+    .imac {
+        max-width: 50%;
+        margin-left: 20px;
+    }
+    .devices {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .productivity {
+        display: block;
+    }
+    .blacklist,
+    .snippets,
+    .preview {
+        margin: 0px auto;
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 930px) {
+    .footer-logo {
+        width: 200px;
+    }
+
+    .footer-logo img {
+        margin: 0 auto;
+        
+
+    }
+}
+
+@media (max-width: 770px) {
+    footer {
+        height: 350px;
+        
+    }
+    .links {
+        margin: 0 auto;
+        width: 200px
+    }   
+    .links a {
+        margin: 0 auto;
+        width: 300px;
+        display : block;
+        flex-wrap: wrap;
+        margin: 10px !important;
+        padding: 5px !important;
+        
+    }
+    header,
+    main,
+    footer {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 680px) {
+    .main-imac {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-imac img {
+        margin-bottom: 50px;
+    }
+
+    .info-right-side {
+        display: block;
+        margin-left: 0;
+        margin-bottom: 100px;
+    }
+
+    .companies img{
+        display: block;
+        margin: 0 auto;
+        padding:30px 0;
+    }
 }
